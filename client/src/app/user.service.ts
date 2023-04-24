@@ -10,7 +10,6 @@ import {
 import { firstValueFrom } from 'rxjs';
 
 // const BACKEND = 'http://localhost:8080';
-const BACKEND = '';
 
 @Injectable()
 export class UserService {
@@ -23,17 +22,17 @@ export class UserService {
     form.set('password', user.password);
 
     return firstValueFrom(
-      this.http.post<PostUserResponse>(`${BACKEND}/api/postUser`, form)
+      // this.http.post<PostUserResponse>(`${BACKEND}/api/postUser`, form)
+      this.http.post<PostUserResponse>(`/api/postUser`, form)
     );
   }
 
-  public getUser(username: string, token: string): Promise<User> {
-    const params = new HttpParams()
-      .set('username', username)
-      .set('token', token);
+  public getUser(email: string, token: string): Promise<User> {
+    const params = new HttpParams().set('email', email).set('token', token);
 
     return firstValueFrom(
-      this.http.get<User>(`${BACKEND}/api/getUser`, { params: params })
+      // this.http.get<User>(`${BACKEND}/api/getUser`, { params: params })
+      this.http.get<User>(`/api/getUser`, { params: params })
     );
   }
 
@@ -47,7 +46,8 @@ export class UserService {
     // form.set('userImage', user.userImage!);
 
     return firstValueFrom(
-      this.http.put<EditUserResponse>(`${BACKEND}/api/editUser`, form)
+      // this.http.put<EditUserResponse>(`${BACKEND}/api/editUser`, form)
+      this.http.put<EditUserResponse>(`/api/editUser`, form)
     );
   }
 
@@ -58,7 +58,8 @@ export class UserService {
     const params = new HttpParams().set('user_id', user_id).set('token', token);
 
     return firstValueFrom(
-      this.http.get<LoginRecord[]>(`${BACKEND}/api/getLoginRecord`, {
+      // this.http.get<LoginRecord[]>(`${BACKEND}/api/getLoginRecord`, {
+      this.http.get<LoginRecord[]>(`/api/getLoginRecord`, {
         params: params,
       })
     );
@@ -75,7 +76,8 @@ export class UserService {
       .set('email', email);
 
     return firstValueFrom(
-      this.http.delete<DeleteUserResponse>(`${BACKEND}/api/deleteUser`, {
+      // this.http.delete<DeleteUserResponse>(`${BACKEND}/api/deleteUser`, {
+      this.http.delete<DeleteUserResponse>(`/api/deleteUser`, {
         params: params,
       })
     );

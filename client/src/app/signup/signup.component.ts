@@ -22,6 +22,11 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.createForm();
+
+    if (localStorage.getItem('userData') != null) {
+      alert('You are already logged in!');
+      this.router.navigate(['/']);
+    }
   }
 
   processForm() {

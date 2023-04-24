@@ -85,22 +85,17 @@ public class UserController {
   // GET /api/getUser
   @GetMapping(path = "/getUser")
   @ResponseBody
-  public ResponseEntity<String> getUser(@RequestParam String username, @RequestParam String token) {
+  public ResponseEntity<String> getUser(@RequestParam String email, @RequestParam String token) {
 
     // System.out.println("username:" + username + " " + "token: " + token);
 
     JsonObject result = null;
 
-    if (tokenSvc.getToken().equals(token)) {
-      User user = userSvc.getUser(username);
-      JsonObjectBuilder builder = Json.createObjectBuilder(user.toJSON());
-      result = builder.build();
+    User user = userSvc.getUserByEmail(email);
+    JsonObjectBuilder builder = Json.createObjectBuilder(user.toJSON());
+    result = builder.build();
 
-      return ResponseEntity.ok(result.toString());
-    } else {
-      JsonObject error = Json.createObjectBuilder().add("ERROR", "INVALID TOKEN").build();
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error.toString());
-    }
+    return ResponseEntity.ok(result.toString());
 
   }
 
@@ -109,21 +104,16 @@ public class UserController {
   @ResponseBody
   public ResponseEntity<String> getLoginRecord(@RequestParam String user_id, @RequestParam String token) {
 
-    if (tokenSvc.getToken().equals(token)) {
-      JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
-      loginRecordSvc.getLoginRecord(user_id).stream()
-          .forEach(r -> {
-            arrayBuilder.add(r.toJSON());
-          });
+    JsonArrayBuilder arrayBuilder = Json.createArrayBuilder();
+    loginRecordSvc.getLoginRecord(user_id).stream()
+        .forEach(r -> {
+          arrayBuilder.add(r.toJSON());
+        });
 
-      String response = arrayBuilder.build().toString();
+    String response = arrayBuilder.build().toString();
 
-      return ResponseEntity.ok(response);
+    return ResponseEntity.ok(response);
 
-    } else {
-      JsonObject error = Json.createObjectBuilder().add("ERROR", "INVALID TOKEN").build();
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error.toString());
-    }
   }
 
   // POST /api/userLogin
@@ -165,41 +155,37 @@ public class UserController {
       @RequestPart String password,
       @RequestPart String email, @RequestPart String user_id, @RequestPart String token) {
 
-    if (tokenSvc.getToken().equals(token)) {
-      try {
+    try {
 
-        String result = userSvc.editUser(user_id, username, password, email);
+      String result = userSvc.editUser(user_id, username, password, email);
 
-        if (result.equals("User profile was not changed") || result.equals("User account does not exist")) {
+      if (result.equals("User profile was not changed") || result.equals("User account does not exist")) {
 
-          String body = "Hello,\n\nYour User Account details update was not successful.\nPlease try again.\n\n\nBest regards,\nSystem Admin";
-          String subject = "User Account details update failed";
+        String body = "Hello,\n\nYour User Account details update was not successful.\nPlease try again.\n\n\nBest regards,\nSystem Admin";
+        String subject = "User Account details update failed";
 
-          emailSvc.sendEmail(email, subject, body);
+        emailSvc.sendEmail(email, subject, body);
 
-        } else {
-          String body = "Hello %s,\n\nYour User Account details update was successful.\n\n\nBest regards,\nSystem Admin"
-              .formatted(username);
-          String subject = "User Account details has been updated";
+      } else {
+        String body = "Hello %s,\n\nYour User Account details update was successful.\n\n\nBest regards,\nSystem Admin"
+            .formatted(username);
+        String subject = "User Account details has been updated";
 
-          emailSvc.sendEmail(email, subject, body);
-        }
-
-        JsonObject response = Json.createObjectBuilder()
-            .add("editUserResponse", result)
-            .build();
-
-        return ResponseEntity.ok(response.toString());
-
-      } catch (Exception ex) {
-        JsonObject error = Json.createObjectBuilder().add("error", ex.getMessage()).build();
-
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error.toString());
+        emailSvc.sendEmail(email, subject, body);
       }
-    } else {
-      JsonObject error = Json.createObjectBuilder().add("ERROR", "INVALID TOKEN").build();
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error.toString());
+
+      JsonObject response = Json.createObjectBuilder()
+          .add("editUserResponse", result)
+          .build();
+
+      return ResponseEntity.ok(response.toString());
+
+    } catch (Exception ex) {
+      JsonObject error = Json.createObjectBuilder().add("error", ex.getMessage()).build();
+
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error.toString());
     }
+
   }
 
   // DELETE /api/deleteUser
@@ -208,38 +194,33 @@ public class UserController {
   public ResponseEntity<String> deleteUser(@RequestParam String user_id, @RequestParam String token,
       @RequestParam String email) {
 
-    if (tokenSvc.getToken().equals(token)) {
-      try {
-        String result = userSvc.deleteUser(user_id);
+    try {
+      String result = userSvc.deleteUser(user_id);
 
-        if (result.equals("Success")) {
-          String body = "Hello,\n\nYour User Account has been deleted.\nWe are sad to see you go.\n\n\nBest regards,\nSystem Admin";
-          String subject = "User Account Deleted";
+      if (result.equals("Success")) {
+        String body = "Hello,\n\nYour User Account has been deleted.\nWe are sad to see you go.\n\n\nBest regards,\nSystem Admin";
+        String subject = "User Account Deleted";
 
-          emailSvc.sendEmail(email, subject, body);
-        } else {
-          String body = "Hello,\n\nThe request to delete your User Account was unsuccessful.\nPlease try again.\n\n\nBest regards,\nSystem Admin";
-          String subject = "User Account Delete Unsuccessful";
+        emailSvc.sendEmail(email, subject, body);
+      } else {
+        String body = "Hello,\n\nThe request to delete your User Account was unsuccessful.\nPlease try again.\n\n\nBest regards,\nSystem Admin";
+        String subject = "User Account Delete Unsuccessful";
 
-          emailSvc.sendEmail(email, subject, body);
-        }
-
-        JsonObject response = Json.createObjectBuilder()
-            .add("deleteUserResponse", result)
-            .build();
-
-        return ResponseEntity.ok(response.toString());
-
-      } catch (Exception ex) {
-        JsonObject error = Json.createObjectBuilder().add("error", ex.getMessage()).build();
-
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error.toString());
+        emailSvc.sendEmail(email, subject, body);
       }
 
-    } else {
-      JsonObject error = Json.createObjectBuilder().add("ERROR", "INVALID TOKEN").build();
-      return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error.toString());
+      JsonObject response = Json.createObjectBuilder()
+          .add("deleteUserResponse", result)
+          .build();
+
+      return ResponseEntity.ok(response.toString());
+
+    } catch (Exception ex) {
+      JsonObject error = Json.createObjectBuilder().add("error", ex.getMessage()).build();
+
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error.toString());
     }
+
   }
 
 }

@@ -4,7 +4,6 @@ import { Comment, Location } from './models';
 import { firstValueFrom } from 'rxjs';
 
 // const BACKEND = 'http://localhost:8080';
-const BACKEND = '';
 
 @Injectable()
 export class LocationService {
@@ -12,13 +11,15 @@ export class LocationService {
 
   public getLocations(): Promise<Location[]> {
     return firstValueFrom(
-      this.http.get<Location[]>(`${BACKEND}/api/locations`)
+      // this.http.get<Location[]>(`${BACKEND}/api/locations`)
+      this.http.get<Location[]>(`/api/locations`)
     );
   }
 
   public getLocationByName(location_name: string): Promise<Location> {
     return firstValueFrom(
-      this.http.get<Location>(`${BACKEND}/api/location/${location_name}`)
+      // this.http.get<Location>(`${BACKEND}/api/location/${location_name}`)
+      this.http.get<Location>(`/api/location/${location_name}`)
     );
   }
 }

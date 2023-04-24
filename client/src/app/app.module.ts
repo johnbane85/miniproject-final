@@ -74,7 +74,10 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes, { scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(appRoutes, {
+      scrollPositionRestoration: 'enabled',
+      useHash: true,
+    }),
     BrowserAnimationsModule,
     MaterialModule,
   ],

@@ -25,11 +25,12 @@ export class UserInfoComponent implements OnInit {
     const userName = userData.username_returned;
     const token = userData._token;
     const userId = userData.userId_returned;
+    const userEmail = userData.email_returned;
 
     // console.log('userName: ' + userName + ' token: ' + token);
 
     this.userSvc
-      .getUser(userName, token)
+      .getUser(userEmail, token)
       .then((result) => {
         this.user = result;
       })

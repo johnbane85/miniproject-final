@@ -37,7 +37,7 @@ export class EditUserComponent implements OnInit {
     this.token = userData._token;
 
     this.userSvc
-      .getUser(userData.username_returned, userData._token)
+      .getUser(userData.email_returned, userData._token)
       .then((result) => {
         this.username = result.username;
         this.password = result.password;

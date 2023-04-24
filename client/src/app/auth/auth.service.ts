@@ -5,7 +5,6 @@ import { authModel, authUser } from './auth.model';
 import { Router } from '@angular/router';
 
 // const BACKEND = 'http://localhost:8080';
-const BACKEND = '';
 
 @Injectable()
 export class AuthService {
@@ -19,9 +18,11 @@ export class AuthService {
     form.set('email', email);
     form.set('password', password);
 
-    this.http.post<authModel>(`${BACKEND}/api/userLogin`, form);
+    // this.http.post<authModel>(`${BACKEND}/api/userLogin`, form);
+    this.http.post<authModel>(`/api/userLogin`, form);
 
-    return this.http.post<authModel>(`${BACKEND}/api/userLogin`, form).pipe(
+    // return this.http.post<authModel>(`${BACKEND}/api/userLogin`, form).pipe(
+    return this.http.post<authModel>(`/api/userLogin`, form).pipe(
       catchError((error) => throwError(() => this.handleError(error))),
       tap((resData) => {
         this.handleAuthentication(

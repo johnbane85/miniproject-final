@@ -4,7 +4,6 @@ import { Comment, PostCommentResponse } from './models';
 import { firstValueFrom } from 'rxjs';
 
 // const BACKEND = 'http://localhost:8080';
-const BACKEND = '';
 
 @Injectable()
 export class CommentService {
@@ -18,13 +17,15 @@ export class CommentService {
     form.set('text', comment.text);
 
     return firstValueFrom(
-      this.http.post<PostCommentResponse>(`${BACKEND}/api/postComment`, form)
+      // this.http.post<PostCommentResponse>(`${BACKEND}/api/postComment`, form)
+      this.http.post<PostCommentResponse>(`/api/postComment`, form)
     );
   }
 
   public getComments(location_name: string): Promise<Comment[]> {
     return firstValueFrom(
-      this.http.get<Comment[]>(`${BACKEND}/api/getComments/${location_name}`)
+      // this.http.get<Comment[]>(`${BACKEND}/api/getComments/${location_name}`)
+      this.http.get<Comment[]>(`/api/getComments/${location_name}`)
     );
   }
 }
