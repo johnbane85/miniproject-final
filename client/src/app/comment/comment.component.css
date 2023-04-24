@@ -1,0 +1,24 @@
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #3b3d6e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.comment-form {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.comment-card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 400px;
+  max-height: fit-content;
+  background-color: aliceblue;
+}

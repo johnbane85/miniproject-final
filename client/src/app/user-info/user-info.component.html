@@ -1,0 +1,38 @@
+<h1>User Information</h1>
+
+<div style="margin: 8px">
+  <mat-card class="info-card">
+    <mat-card-content>
+      <p>
+        <b>User ID:&nbsp;&nbsp;{{ user.user_id }}</b>
+      </p>
+      <p>
+        <b>User name:&nbsp;&nbsp;{{ user.username }}</b>
+      </p>
+      <p>
+        <b> e-mail:&nbsp;&nbsp;{{ user.email }}</b>
+      </p>
+
+      <div *ngIf="loginRecords.length > 0">
+        <div *ngFor="let r of loginRecords">
+          <p>
+            <b>Login count:&nbsp;&nbsp;{{ r.login_count }}</b>
+          </p>
+          <p>
+            <b>Last Login:&nbsp;&nbsp;{{ r.last_login }}</b>
+          </p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="box">
+  <button
+    mat-raised-button
+    color="accent"
+    type="button"
+    routerLink="/user-info/edit-user"
+  >
+    Edit User Info
+  </button>
+</div>

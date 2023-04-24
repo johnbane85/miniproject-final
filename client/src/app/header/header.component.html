@@ -1,0 +1,41 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="navbar">
+    <div>
+      <span>
+        <a
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [routerLink]="['/']"
+          >Home</a
+        ></span
+      >
+      <span *ngIf="!isAuthenticated">
+        <a routerLinkActive="active-link" [routerLink]="['/signup']">Sign Up</a>
+      </span>
+      <span *ngIf="!isAuthenticated">
+        <a routerLinkActive="active-link" [routerLink]="['/login']">Login</a>
+      </span>
+      <span *ngIf="isAuthenticated"
+        ><a routerLinkActive="active-link" routerLink="/user-info"
+          >User Info</a
+        ></span
+      >
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="isAuthenticated">
+    <span *ngIf="isAuthenticated">
+      <button
+        mat-raised-button
+        color="accent"
+        type="button"
+        (click)="onLogout()"
+      >
+        Logout
+      </button></span
+    >
+    <span *ngIf="isAuthenticated">
+      <p class="material-icons" style="transform: scale(1.2)">person</p>
+      {{ authUser.username_returned }}</span
+    >
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,57 @@
+<h1>Please leave a Comment</h1>
+
+<mat-card class="comment-card">
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="processForm()" class="comment-form">
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>User ID:</mat-label>
+          <input matInput value="{{ userId }}" readonly />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>User name:</mat-label>
+          <input matInput value="{{ userName }}" readonly />
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Location Name:</mat-label>
+          <select matNativeControl formControlName="location_name">
+            <option [value]="location_name" [selected]="location_name">
+              {{ location_name }}
+            </option>
+          </select>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Leave a comment</mat-label>
+          <textarea
+            matInput
+            placeholder="Ex. This place makes me feel..."
+            formControlName="text"
+            cols="30"
+            rows="4"
+          ></textarea>
+        </mat-form-field>
+      </p>
+      <p>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="form.invalid"
+        >
+          Post Comment
+        </button>
+      </p>
+      <p>
+        <button mat-raised-button color="warn" onclick="history.back()">
+          Go Back
+        </button>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>

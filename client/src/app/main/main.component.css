@@ -1,0 +1,44 @@
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #3b3d6e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.cards mat-card {
+  flex: 0 0 33.333333%;
+  background-color: aliceblue;
+}
+
+.cards mat-card:hover {
+  background-color: #fff5d9;
+}
+
+.main-card {
+  max-width: 320px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3b3d6e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.main-card:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+img {
+  border-radius: 18%;
+}

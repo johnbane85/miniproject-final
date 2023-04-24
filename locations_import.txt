@@ -1,0 +1,3 @@
+mongoimport -hlocalhost --port=27017 -dtoursg -clocations --jsonArray locations.json
+
+mongoimport --uri "mongodb://mongo:${MONGO_PASSWORD}@containers-us-west-191.railway.app:7775/railway" --authenticationDatabase=admin -clocations --jsonArray locations.json

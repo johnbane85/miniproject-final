@@ -1,0 +1,61 @@
+<h1>User Login</h1>
+
+<mat-card class="main-card">
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="processForm()" class="login-form">
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>e-mail:</mat-label>
+          <input matInput type="email" formControlName="email" size="30" />
+          <mat-error
+            style="color: red"
+            *ngIf="
+              form.get('email')?.hasError('required') &&
+              form.get('email')?.dirty
+            "
+          >
+            Please enter your e-mail
+          </mat-error>
+          <mat-error
+            style="color: red"
+            *ngIf="form.get('email')?.hasError('email')"
+          >
+            Please enter a valid e-mail
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <mat-label>Password:</mat-label>
+          <input
+            matInput
+            type="password"
+            formControlName="password"
+            size="30"
+          />
+          <mat-error
+            style="color: red"
+            *ngIf="
+              form.get('password')?.hasError('required') &&
+              form.get('password')?.dirty
+            "
+          >
+            Please enter your password
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Login
+      </button>
+      <p>
+        test-user &nbsp; || &nbsp; e-mail: test@mail.com &nbsp;&nbsp; Password:
+        123456
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>

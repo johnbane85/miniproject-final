@@ -1,0 +1,32 @@
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #3b3d6e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.editUser-form {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.deleteUser-form {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.deleteUser-card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 400px;
+  max-height: 160px;
+  background-color: aliceblue;
+}
+
+.editUser-card {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 400px;
+  background-color: #fae2a1;
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "location_id": 1,
+    "location_name": "Merlion",
+    "address": "1 Fullerton Rd, Singapore 049213",
+    "description": "Singapore's Merlion is just what it sounds like, the figure of a mythical creature that has the head of a lion and the body and tail of a fish. The Merlion represents the city's humble start as a fishing village combined with its traditional Malay name Singapura, 'lion city'.",
+    "website_url": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/viewpoints/merlion-park/",
+    "image_1": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/viewpoints/merlion-park/jcr:content/par-carousel/carousel_detailpage/carousel/item0.thumbnail.carousel-img.1480.833.jpg",
+    "image_2": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/viewpoints/merlion-park/jcr:content/par-carousel/carousel_detailpage/carousel/item1.thumbnail.carousel-img.1480.833.jpg",
+    "image_3": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/viewpoints/merlion-park/jcr:content/par-carousel/carousel_detailpage/carousel/item2.thumbnail.carousel-img.1480.833.jpg"
+  },
+  {
+    "location_id": 2,
+    "location_name": "Jewel Changi Airport",
+    "address": "78 Airport Blvd., Singapore 819666",
+    "description": "Jewel Changi Airport is a nature-themed entertainment and retail complex surrounded by and linked to one of the passenger terminals of Changi Airport, Singapore. Its centrepiece is the world's tallest indoor waterfall, the Rain Vortex, that is surrounded by a terraced forest setting.",
+    "website_url": "https://www.jewelchangiairport.com/",
+    "image_1": "https://www.visitsingapore.com/singapore-itineraries/1-day-guide-to-jewel-changi/jcr:content/par-carousel/carousel_detailpage/carousel/item_1.thumbnail.carousel-img.1480.833.jpg",
+    "image_2": "https://media.cntraveler.com/photos/5cdc6ee7a6a5c4323b2f0b02/master/pass/Changi-Jewel_Lester-Ledesma__1220574.jpg",
+    "image_3": "https://images.squarespace-cdn.com/content/v1/6244901b5326a2313a3f3c91/1665766552792-ZXVJBCLW6WSMDM4KYOD9/Jewel_Thumbnail_01.png"
+  },
+  {
+    "location_id": 3,
+    "location_name": "Singapore Botanic Gardens",
+    "address": "1 Cluny Rd, Singapore 259569",
+    "description": "The Singapore Botanic Gardens is a 164-year-old tropical garden located at the fringe of the Orchard Road shopping district in Singapore. It is one of three gardens, and the only tropical garden, to be honoured as a UNESCO World Heritage Site.",
+    "website_url": "https://www.nparks.gov.sg/sbg",
+    "image_1": "https://www.visitsingapore.com/see-do-singapore/nature-wildlife/parks-gardens/singapore-botanic-gardens/jcr:content/par-carousel/carousel_detailpage/carousel/item_2.thumbnail.carousel-img.1480.833.jpg",
+    "image_2": "https://media.timeout.com/images/101854423/1024/576/image.jpg",
+    "image_3": "https://media.timeout.com/images/101854417/1024/576/image.jpg"
+  },
+  {
+    "location_id": 4,
+    "location_name": "Esplanade Theatres on the Bay",
+    "address": "1 Esplanade Dr Singapore 038981",
+    "description": "Experience the joy that the arts brings through a diverse range of performances all year round at Singapore's national performing arts centre.",
+    "website_url": "https://www.esplanade.com/",
+    "image_1": "https://upload.wikimedia.org/wikipedia/commons/f/fa/The_Esplanade_%E2%80%93_Theatres_on_the_Bay.jpg",
+    "image_2": "https://www.visitsingapore.com/see-do-singapore/arts/performance-arts/esplanade-theatres-on-the-bay/_jcr_content/par-carousel/carousel_detailpage/carousel/item_1.thumbnail.carousel-img.740.416.jpg",
+    "image_3": "https://en.wikiarquitectura.com/wp-content/uploads/2017/01/090_complejo_esplanade.jpg"
+  },
+  {
+    "location_id": 5,
+    "location_name": "Marina Bay Sands",
+    "address": "10 Bayfront Ave, Singapore 018956",
+    "description": "Located along the Marina Bay waterfront, the integrated resort features more than 2,200 hotel rooms and suites across its three cascading hotel towers, and an extraordinary rooftop Sands SkyPark with an Infinity Pool. It also boasts the best shopping mall in Asia, the largest nightclub in Singapore, world-class celebrity chef restaurants, a theatre and a Las Vegas-style casino. Business visitors will also enjoy the extensive Meetings, Incentives, Conventions and Exhibitions (MICE) facilities featuring state-of-the-art technology, highly flexible exhibition halls, and a convention centre that can host over 45,000 delegates. Completing the line-up of attractions is ArtScience Museum at Marina Bay Sands, which plays host to permanent and marquee exhibitions.",
+    "website_url": "https://www.marinabaysands.com/",
+    "image_1": "https://esmzwrjnedz.exactdn.com/wp-content/uploads/2021/10/shutterstock_350484137-min-1.jpg",
+    "image_2": "https://www.visitsingapore.com/see-do-singapore/recreation-leisure/resorts/marina-bay-sands/_jcr_content/par-carousel/carousel_detailpage/carousel/item_1.thumbnail.carousel-img.740.416.jpg",
+    "image_3": "https://www.marinabaysands.com/content/dam/singapore/marinabaysands/master/main/home/company-information/corporate-social-responsibility/csr-revamp/csr-masthead-mobile_600x400.jpg"
+  },
+  {
+    "location_id": 6,
+    "location_name": "Gardens by the Bay",
+    "address": "18 Marina Gardens Dr, Singapore 018953",
+    "description": "A national garden and premier horticultural attraction for local and international visitors, Gardens by the Bay is a showpiece of horticulture and garden artistry that presents the plant kingdom in a whole new way, entertaining while educating visitors with plants seldom seen in this part of the world, ranging from species in cool, temperate climates to tropical forests and habitats.",
+    "website_url": "https://www.gardensbythebay.com.sg/",
+    "image_1": "https://www.visitsingapore.com/see-do-singapore/nature-wildlife/parks-gardens/gardens-by-the-bay/_jcr_content/par-carousel/carousel_detailpage/carousel/item_1.thumbnail.carousel-img.740.416.jpg",
+    "image_2": "https://a.cdn-hotels.com/gdcs/production123/d1119/5f06e551-0b51-44e4-9816-0404bf62c25c.jpg",
+    "image_3": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Marina_Bay_Sands_from_Gardens_By_The_Bay.jpg"
+  },
+  {
+    "location_id": 7,
+    "location_name": "Singapore Zoo",
+    "address": "80 Mandai Lake Rd, Singapore 729826",
+    "description": "Get ready for a wild adventure with over 4,200 animals inhabiting our lush tropical rainforest.",
+    "website_url": "https://www.mandai.com/en/singapore-zoo.html",
+    "image_1": "https://upload.wikimedia.org/wikipedia/commons/5/50/Singapore_Zoo_entrance-15Feb2010.jpg",
+    "image_2": "https://www.visitsingapore.com/see-do-singapore/nature-wildlife/fun-with-animals/singapore-zoo/_jcr_content/par-carousel/carousel_detailpage/carousel/item_2.thumbnail.carousel-img.740.416.jpg",
+    "image_3": "https://www.mandai.com/content/dam/mandai/singapore-zoo/wild-africa-giraffes-1200x630.jpg"
+  },
+  {
+    "location_id": 8,
+    "location_name": "Universal Studios Singapore",
+    "address": "8 Sentosa Gateway, Singapore 098269",
+    "description": "Universal Studios Singapore is a theme park located within the Resorts World Sentosa integrated resort at Sentosa, Singapore. It features 28 rides, shows, and attractions in seven themed zones. It is one of the six Universal Studios theme parks around the world.",
+    "website_url": "https://www.rwsentosa.com/en/attractions/universal-studios-singapore",
+    "image_1": "https://static.honeykidsasia.com/wp-content/uploads/2021/02/universal-studios-singapore-kids-family-guide-honeykids-asia.jpg",
+    "image_2": "https://cdn-imgix.headout.com/media/images/c497391f923ba0e5a831fecd4d8d2ecb-7442-singapore-universal-studio-singapore-one-day-ticket-19.jpg",
+    "image_3": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Universal_Singapore_Hollywood_Boulevard.jpg"
+  },
+  {
+    "location_id": 9,
+    "location_name": "Fort Canning Park",
+    "address": "River Valley Rd, Singapore 179037",
+    "description": "Fort Canning has had a long and varied life. Built in 1859, the fort was originally meant to defend Singapore against attacks but it became a bunker during World War II and was eventually surrendered to the Japanese in 1942. Now in peacetime, the original building is home to modern performing arts troupes, and the park regularly sees picnics, concerts, theater performances, and festivals.",
+    "website_url": "https://www.nparks.gov.sg/gardens-parks-and-nature/parks-and-nature-reserves/fort-canning-park",
+    "image_1": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX28459434.jpg",
+    "image_2": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Fort_Canning_Park_sign%2C_Singapore_-_20110506.jpg/640px-Fort_Canning_Park_sign%2C_Singapore_-_20110506.jpg",
+    "image_3": "https://i.pinimg.com/originals/8b/8d/14/8b8d149bb3f4efea08ebfd3c8a2d39e5.jpg"
+  },
+  {
+    "location_id": 10,
+    "location_name": "Clarke Quay",
+    "address": "3 River Valley Rd, Singapore 179024",
+    "description": "From iconic dance clubs to live music venues and rooftop bars, this ultimate guide to drinking and partying in Clarke Quay is a must-have for anyone looking for a boozy good time in the city.",
+    "website_url": "https://www.visitsingapore.com/walking-tour/eat-drink/drinking-clarke-quay-boat-quay/",
+    "image_1": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/1_clarke_quay_singapore_night_2014.jpg/1200px-1_clarke_quay_singapore_night_2014.jpg",
+    "image_2": "https://a.cdn-hotels.com/gdcs/production25/d874/7a81c1ec-88bf-46c5-8067-9c167e0dad14.jpg",
+    "image_3": "https://www.visitsingapore.com/walking-tour/eat-drink/drinking-clarke-quay-boat-quay/_jcr_content/par-carousel/carousel_detailpage/carousel/item_1.thumbnail.carousel-img.740.416.jpg"
+  }
+]

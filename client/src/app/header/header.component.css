@@ -1,0 +1,20 @@
+.active-link {
+  font-weight: bold;
+  color: #fcbc28;
+  padding: 2px;
+}
+
+span {
+  margin: 6px;
+  color: #fffeff;
+}
+
+.navbar {
+  justify-content: space-between;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fffeff;
+}

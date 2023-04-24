@@ -1,0 +1,90 @@
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #3b3d6e;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.weather-table {
+  border: 2px solid #3b3d6e;
+  color: #2d2f6d;
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 100%;
+  height: auto;
+}
+
+.info-table {
+  border: 2px solid #3b3d6e;
+  border-radius: 10px;
+  margin: 4px;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.info-table > tr > td {
+  border: 1px solid #3b3d6e;
+  border-radius: 4px;
+  margin: 4px;
+  background-color: #e0fad9;
+}
+
+.pictures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2px;
+}
+
+.pictures > img {
+  max-width: 100%;
+  height: auto;
+  margin: 4px;
+}
+
+.map-content {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.map-content > iframe {
+  max-width: 100%;
+  max-height: auto;
+  margin: 2px;
+}
+
+button {
+  margin: 8px;
+}
+
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.comment-card {
+  flex: 0 0 50%;
+  max-width: 100%;
+  height: auto;
+  background-color: rgb(237, 246, 248);
+  margin: 8px;
+  color: #2d2f6d;
+}

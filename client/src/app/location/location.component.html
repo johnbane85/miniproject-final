@@ -1,0 +1,96 @@
+<h1 class="title">
+  <a href="{{ location.website_url }}" target="_blank">{{ locationName }}</a>
+</h1>
+
+<div>
+  <table class="weather-table">
+    <tr>
+      <td>
+        <img [src]="weather.icon" alt="icon" />
+      </td>
+      <td>
+        {{ weather.text }} &nbsp;
+        <p class="material-icons" style="transform: scale(1.4)">thermostat</p>
+        {{ weather.temp_c }}&#8451;
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <table class="info-table">
+    <tr>
+      <td><strong>Address:</strong> {{ location.address }}</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="{{ location.website_url }}" target="_blank">{{
+          location.website_url
+        }}</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><strong>Description:</strong> {{ location.description }}</p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="pictures">
+  <img [src]="location.image_1" alt="image_1" width="350" height="320" />
+
+  <img [src]="location.image_2" alt="image_2" width="350" height="320" />
+
+  <img [src]="location.image_3" alt="image_3" width="350" height="320" />
+</div>
+
+<div class="map-content">
+  <iframe
+    width="400"
+    height="400"
+    style="border: 0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    [src]="api_url | safe"
+  >
+  </iframe>
+</div>
+
+<div class="buttons">
+  <button mat-raised-button color="warn" type="button" [routerLink]="['/']">
+    Back
+  </button>
+  <hr width="70%" />
+  <button
+    mat-raised-button
+    color="primary"
+    type="button"
+    routerLink="/{{ location.location_name }}/comment"
+    [disabled]="!isAuthenticated"
+  >
+    Leave a Comment
+  </button>
+</div>
+
+<h3 class="title">
+  <b>Comments({{ comments.length }}):</b>
+</h3>
+
+<div *ngIf="comments.length > 0" class="comments">
+  <mat-card *ngFor="let c of comments" class="comment-card">
+    <mat-card-header>
+      <mat-card-subtitle>
+        <p>{{ c.comment_date }}</p>
+        <p>User ID: {{ c.user_id }}</p>
+        <p>User name: {{ c.username }}</p>
+        <!-- <p>Location Name: {{ c.location_name }}</p> -->
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p>{{ c.text }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
