@@ -57,7 +57,7 @@ export class LocationComponent implements OnInit, OnDestroy {
     // call to the google maps API
     // slice() returns a new copy of the string without modifying the original string
     this.api_url =
-      'https://www.google.com/maps/embed/v1/place?key=AIzaSyCv3pK5sZA3VdS20_d9f8zBvPen7ZDxIUc&q=' +
+      'https://www.google.com/maps/embed/v1/place?key=AIzaSyBg5QfDjS-uHoKYMFgiWEVdolx8er53mrw&q=' +
       this.locationName.slice().replaceAll(' ', '+');
 
     // call for list of comments
